@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nexora Estates — connecting buyers and investors with trusted real estate opportunities in Dubai through licensed brokerage partners.">
+<title>Nexora Estates | Real Estate • Investments • Connections</title>
+<style>
+:root{
+  --navy:#061326;
+  --navy2:#0b1d36;
+  --gold:#d9a94a;
+  --gold2:#f2cf7a;
+  --white:#f7f8fb;
+  --muted:#aab5c6;
+  --card:#0d2039;
+  --line:rgba(217,169,74,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--navy);color:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(6,19,38,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:2px}
+.brand img{width:45px;height:45px;object-fit:contain}
+.brand span{font-size:18px}
+.links{display:flex;gap:28px;color:#dbe2ed;font-size:14px}
+.links a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:4px;font-weight:700;font-size:14px;transition:.2s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#081426}
+.btn-outline{border:1px solid var(--line);color:var(--gold2)}
+.btn:hover{transform:translateY(-2px)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;background:radial-gradient(circle at 75% 35%,rgba(217,169,74,.12),transparent 28%),linear-gradient(135deg,#061326,#091a31)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:70px;align-items:center}
+.eyebrow{color:var(--gold2);letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:20px}
+h1{font-size:clamp(45px,6vw,78px);line-height:1.02;letter-spacing:-2px;margin-bottom:25px}
+h1 span{color:var(--gold2)}
+.hero p{max-width:650px;color:var(--muted);font-size:18px;margin-bottom:32px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(18,42,72,.9),rgba(8,23,43,.85));padding:35px;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.hero-card img{width:100%;max-width:360px;display:block;margin:auto;filter:drop-shadow(0 15px 30px rgba(0,0,0,.3))}
+.hero-card .mini{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+section{padding:95px 0}
+.section-head{max-width:700px;margin-bottom:45px}
+.section-head .eyebrow{margin-bottom:12px}
+h2{font-size:clamp(32px,4vw,48px);line-height:1.1;margin-bottom:16px}
+.section-head p{color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.07);padding:30px;border-radius:7px}
+.icon{font-size:28px;color:var(--gold2);margin-bottom:18px}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px}
+.dark{background:#07172a}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{padding:25px;border-top:2px solid var(--gold);background:rgba(255,255,255,.025)}
+.num{color:var(--gold2);font-size:13px;letter-spacing:2px;margin-bottom:20px}
+.step h3{margin-bottom:8px}
+.step p{color:var(--muted);font-size:14px}
+.invest{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.invest ul{list-style:none;margin:25px 0}
+.invest li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#d8dfeb}
+.invest li:before{content:"✓";color:var(--gold2);margin-right:12px}
+.quote{padding:35px;border-left:3px solid var(--gold);background:rgba(217,169,74,.06);color:#dce4ef}
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px}
+form{background:var(--card);padding:30px;border:1px solid rgba(255,255,255,.08);border-radius:7px}
+label{display:block;font-size:13px;color:#c5cfdd;margin:14px 0 7px}
+input,select,textarea{width:100%;padding:13px 14px;background:#07172a;border:1px solid rgba(255,255,255,.12);color:white;border-radius:4px;outline:none}
+textarea{min-height:120px;resize:vertical}
+footer{padding:45px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:13px}
+.footerin{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.disclaimer{margin-top:25px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);font-size:12px;max-width:900px}
+.mobile{display:none}
+@media(max-width:800px){
+ .links{display:none}.mobile{display:block}
+ .hero-grid,.invest,.contact{grid-template-columns:1fr}
+ .grid3{grid-template-columns:1fr}
+ .process{grid-template-columns:1fr 1fr}
+ .hero{padding-top:115px}
+}
+@media(max-width:500px){.process{grid-template-columns:1fr}h1{font-size:48px}}
+</style>
+</head>
+<body>
+<nav>
+ <div class="container navin">
+  <a href="#home" class="brand">
+   <img src="logo.png" alt="Nexora Estates logo">
+   <span>NEXORA ESTATES</span>
+  </a>
+  <div class="links">
+   <a href="#services">Services</a><a href="#process">How It Works</a><a href="#investment">Investment</a><a href="#contact">Contact</a>
+  </div>
+  <a class="btn btn-gold mobile" href="#contact">Enquire</a>
+ </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow">Real Estate • Investments • Connections</div>
+   <h1>Connect with <span>exceptional</span> property opportunities.</h1>
+   <p>Nexora Estates connects buyers and investors with carefully selected real estate opportunities through established, licensed brokerage partners.</p>
+   <div class="actions">
+    <a class="btn btn-gold" href="https://wa.me/917709590576?text=Hello%20Nexora%20Estates%2C%20I%27m%20interested%20in%20a%20property." target="_blank">Start Your Property Search</a>
+    <a class="btn btn-outline" href="#process">How It Works</a>
+   </div>
+  </div>
+  <div class="hero-card">
+   <img src="logo.png" alt="Nexora Estates">
+   <div class="mini">A professional referral and property-connection brand.</div>
+  </div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">What We Do</div>
+   <h2>A simpler way to begin your property journey.</h2>
+   <p>From your first enquiry to being connected with the appropriate property professionals, Nexora Estates keeps the process clear and personal.</p>
+  </div>
+  <div class="grid3">
+   <div class="card"><div class="icon">01</div><h3>Property Referrals</h3><p>Tell us what you are looking for and we connect you with a suitable licensed brokerage partner.</p></div>
+   <div class="card"><div class="icon">02</div><h3>Investor Connections</h3><p>We help interested investors begin conversations around residential and investment property opportunities.</p></div>
+   <div class="card"><div class="icon">03</div><h3>Personal Assistance</h3><p>We stay available throughout the referral journey so your enquiry is handled smoothly and professionally.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="process" class="dark">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">The Process</div>
+   <h2>From enquiry to connection.</h2>
+   <p>A straightforward four-step journey designed around your requirements.</p>
+  </div>
+  <div class="process">
+   <div class="step"><div class="num">STEP 01</div><h3>Tell Us</h3><p>Share your budget, preferred property type, location and goals.</p></div>
+   <div class="step"><div class="num">STEP 02</div><h3>We Match</h3><p>We identify the appropriate opportunity and professional partner for your enquiry.</p></div>
+   <div class="step"><div class="num">STEP 03</div><h3>Get Connected</h3><p>Your details are referred to the relevant licensed brokerage team for advice and viewings.</p></div>
+   <div class="step"><div class="num">STEP 04</div><h3>Move Forward</h3><p>The brokerage partner handles the transaction process, subject to their terms and applicable regulations.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="investment">
+ <div class="container invest">
+  <div>
+   <div class="eyebrow">For Investors</div>
+   <h2>Property opportunities built around your goals.</h2>
+   <p style="color:var(--muted)">Whether you are exploring a home, a second property or an investment opportunity, start with a conversation about what matters to you.</p>
+   <ul>
+    <li>Residential property enquiries</li>
+    <li>Investment-focused property enquiries</li>
+    <li>Off-plan and ready-property enquiries</li>
+    <li>Introductions to licensed brokerage professionals</li>
+   </ul>
+   <a class="btn btn-gold" href="#contact">Discuss Your Requirement</a>
+  </div>
+  <div class="quote">“The goal is simple: understand what you are looking for and make the right professional connection.”<br><br><strong style="color:var(--gold2)">— Nexora Estates</strong></div>
+ </div>
+</section>
+
+<section id="contact" class="dark">
+ <div class="container contact">
+  <div>
+   <div class="eyebrow">Get In Touch</div>
+   <h2>Tell us what you're looking for.</h2>
+   <p style="color:var(--muted);margin-top:15px">Complete the enquiry form and Nexora Estates will get back to you. Replace the contact details below with your business WhatsApp, phone and email before publishing.</p>
+   <div style="margin-top:30px;color:#dce4ef">
+    <p><strong style="color:var(--gold2)">WhatsApp:</strong> <a href="https://wa.me/917709590576" target="_blank">+91 7709590576</a></p>
+    <p><strong style="color:var(--gold2)">Email:</strong> <a href="mailto:gautamsonu670@gmail.com">gautamsonu670@gmail.com</a></p>
+    <p><strong style="color:var(--gold2)">Based in:</strong> India • Serving international property enquiries</p>
+   </div>
+  </div>
+  <form action="mailto:gautamsonu670@gmail.com" method="post" enctype="text/plain">
+   <label for="name">Full Name</label><input id="name" name="Name" required>
+   <label for="phone">WhatsApp / Phone</label><input id="phone" name="Phone" required>
+   <label for="type">Property Requirement</label>
+   <select id="type" name="Requirement">
+    <option>Residential Property</option><option>Investment Property</option><option>Off-Plan Property</option><option>Ready Property</option><option>Other</option>
+   </select>
+   <label for="budget">Approximate Budget</label><input id="budget" name="Budget" placeholder="e.g. AED 1,000,000">
+   <label for="message">Tell us what you are looking for</label><textarea id="message" name="Message" placeholder="Preferred location, property type, purpose, timeline..."></textarea>
+   <button class="btn btn-gold" style="border:0;margin-top:18px;width:100%;cursor:pointer">Send Enquiry</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="footerin">
+   <div><strong style="color:white">NEXORA ESTATES</strong><br>Real Estate • Investments • Connections</div>
+   <div>© 2026 Nexora Estates. All rights reserved.</div>
+  </div>
+  <div class="disclaimer">
+   <strong>Important:</strong> Nexora Estates is presented as a referral/connection brand. Property brokerage, advice, viewings, negotiations and transactions are handled by the applicable licensed brokerage professionals. This website does not constitute a property offer, financial advice, legal advice or a guarantee of investment returns. Availability, pricing and other property information are subject to confirmation by the relevant licensed partner.
+  </div>
+ </div>
+</footer>
+</body>
+</html>
